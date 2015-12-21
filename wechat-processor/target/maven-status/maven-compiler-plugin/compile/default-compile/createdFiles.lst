@@ -1,5 +1,0 @@
-im/cia/wechat/processor/po/Message.class
-im/cia/wechat/processor/utils/MessageUtil.class
-im/cia/wechat/processor/utils/CheckSignatureUtil.class
-im/cia/wechat/processor/servlet/WeChatServlet.class
-im/cia/wechat/processor/po/TextMessage.class
