@@ -1,0 +1,5 @@
+/Users/albert/Workspace/youjia/cia-wechat/wechat-processor/src/main/java/im/cia/wechat/processor/servlet/WeChatServlet.java
+/Users/albert/Workspace/youjia/cia-wechat/wechat-processor/src/main/java/im/cia/wechat/processor/po/Message.java
+/Users/albert/Workspace/youjia/cia-wechat/wechat-processor/src/main/java/im/cia/wechat/processor/po/TextMessage.java
+/Users/albert/Workspace/youjia/cia-wechat/wechat-processor/src/main/java/im/cia/wechat/processor/utils/CheckSignatureUtil.java
+/Users/albert/Workspace/youjia/cia-wechat/wechat-processor/src/main/java/im/cia/wechat/processor/utils/MessageUtil.java
