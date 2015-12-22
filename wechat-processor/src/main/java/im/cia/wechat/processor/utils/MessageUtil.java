@@ -47,6 +47,7 @@ public class MessageUtil {
 		SAXReader reader = new SAXReader();
 
 		InputStream ins = request.getInputStream();
+		
 		Document doc = reader.read(ins);
 
 		Element root = doc.getRootElement();

@@ -5,7 +5,6 @@ import java.io.PrintWriter;
 import java.util.Map;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,7 +15,7 @@ import org.slf4j.LoggerFactory;
 import im.cia.wechat.processor.utils.CheckSignatureUtil;
 import im.cia.wechat.processor.utils.MessageUtil;
 
-@WebServlet(name = "wechat", urlPatterns = "/*")
+//@WebServlet(name = "wechat", urlPatterns = "/*")
 public class WeChatServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
