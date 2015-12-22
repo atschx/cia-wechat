@@ -7,9 +7,12 @@
 	<packaging>pom</packaging>
 
 	<properties>
-		<maven.compiler.source>1.7</maven.compiler.source>
-		<maven.compiler.target>1.7</maven.compiler.target>
+		<jdk.version>1.7</jdk.version>
+		<maven.compiler.source>${jdk.version}</maven.compiler.source>
+		<maven.compiler.target>${jdk.version}</maven.compiler.target>
+		<project.build.encoding>utf-8</project.build.encoding>
 	</properties>
+	
 	<modules>
 		<module>wechat-token</module>
 		<module>wechat-processor</module>

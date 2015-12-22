@@ -9,7 +9,6 @@
 	<artifactId>wechat-processor</artifactId>
 	<packaging>war</packaging>
 
-
 	<repositories>
 		<repository>
 			<id>spring-milestones</id>
