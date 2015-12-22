@@ -6,3 +6,6 @@
 1. xml转换：[xstream](http://x-stream.github.io/architecture.html)
 2. spring-boot 就够了，太方便了(运维友好)
 3. 存储:mysql 优化时再适当引入nosql
+
+Data Exchange
+Data Visualization
