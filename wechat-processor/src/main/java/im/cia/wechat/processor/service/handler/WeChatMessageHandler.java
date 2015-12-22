@@ -21,7 +21,7 @@ public class WeChatMessageHandler implements MessageHandler {
 		String toUserName = weChatMessage.getToUserName();
 		String fromUserName = weChatMessage.getFromUserName();
 
-		LOGGER.debug("FromUserName:" + fromUserName + "->ToUserName:" + toUserName + "-:");
+		LOGGER.debug("FromUserName:" + fromUserName + "->ToUserName:" + toUserName + "-:"+weChatMessage.getMsgType());
 
 		// 交换一下,你说啥我回复啥
 		weChatMessage.setToUserName(fromUserName);

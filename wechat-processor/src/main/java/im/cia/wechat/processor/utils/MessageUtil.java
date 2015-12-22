@@ -73,7 +73,7 @@ public class MessageUtil {
 		
 		XStream stream = new XStream();
 		stream.alias("xml", textMessage.getClass());
-		
+		stream.processAnnotations(TextMessage.class);
 		return stream.toXML(textMessage);
 	}
 	

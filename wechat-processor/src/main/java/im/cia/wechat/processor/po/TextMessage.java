@@ -1,24 +1,29 @@
 package im.cia.wechat.processor.po;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
 public class TextMessage extends Message {
-	
-	private String Content;
-	private String MsgId;
+
+
+	@XStreamAlias("Content")
+	private String content;
+	@XStreamAlias("MsgId")
+	private String msgId;
 
 	public String getContent() {
-		return Content;
+		return content;
 	}
 
 	public void setContent(String content) {
-		Content = content;
+		this.content = content;
 	}
 
 	public String getMsgId() {
-		return MsgId;
+		return msgId;
 	}
 
 	public void setMsgId(String msgId) {
-		MsgId = msgId;
+		this.msgId = msgId;
 	}
 
 }
