@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import im.cia.wechat.processor.domain.model.UserAction;
+import im.cia.wechat.processor.domain.model.UserStatus;
 import im.cia.wechat.processor.domain.repository.UserActionRepository;
+import im.cia.wechat.processor.domain.repository.UserStatusRepository;
 import im.cia.wechat.processor.service.XStreamTransformer;
 import im.cia.wechat.processor.service.bean.WeChatXmlMessage;
 
@@ -17,6 +19,9 @@ public class WeChatMessageHandler implements MessageHandler {
 	
 	@Autowired
 	private UserActionRepository userActionRepository;
+	
+	@Autowired
+	private UserStatusRepository userStatusRepository;
 
 	@Override
 	public String handler(String messageBody) {
@@ -86,12 +91,18 @@ public class WeChatMessageHandler implements MessageHandler {
 		String replayMessage = "";
 		// 关注
 		if ("subscribe".equals(event)) {
-			
+			//subscribe
 			UserAction userAction = new UserAction();
 			userAction.setAppId(toUserName);
 			userAction.setOpenId(fromUserName);
 			userAction.setMsgType(msgType);
 			UserAction userActionFromDb = userActionRepository.save(userAction);
+			
+			UserStatus userStatus = new UserStatus();
+			userStatus.setHasSubscribed(true);
+			userStatus.setOpenId(fromUserName);
+			userStatus.setAppId(toUserName);
+			userStatusRepository.save(userStatus);
 			LOGGER.debug(userActionFromDb.getId());
 		}
 
