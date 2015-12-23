@@ -1,10 +1,13 @@
 package im.cia.wechat.processor.domain.model;
 
+import javax.persistence.MappedSuperclass;
+
 /**
  * 
  * 对公众号而言 用户仅仅表现为 公众号及openId
  * 
  */
+@MappedSuperclass
 public class UserWeChat {
 
 	private String appId;// 公众号

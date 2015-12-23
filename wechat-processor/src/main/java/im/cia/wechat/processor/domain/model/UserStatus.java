@@ -12,7 +12,7 @@ public class UserStatus extends UserWeChat {
 	 * 
 	 * @return
 	 */
-	public boolean isHasSubscribed() {
+	public boolean getHasSubscribed() {
 		return hasSubscribed;
 	}
 
