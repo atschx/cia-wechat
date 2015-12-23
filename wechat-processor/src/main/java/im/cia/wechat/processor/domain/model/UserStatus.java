@@ -1,8 +1,14 @@
 package im.cia.wechat.processor.domain.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 /**
  * 用户与公众号的状态。
  */
+@Entity
+@Table(name = "user_status")
 public class UserStatus extends UserWeChat {
 
 	private boolean hasSubscribed;
@@ -12,6 +18,7 @@ public class UserStatus extends UserWeChat {
 	 * 
 	 * @return
 	 */
+	@Column(name = "has_subscribed")
 	public boolean getHasSubscribed() {
 		return hasSubscribed;
 	}

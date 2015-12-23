@@ -2,8 +2,11 @@ package im.cia.wechat.processor.service.handler;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import im.cia.wechat.processor.domain.model.UserAction;
+import im.cia.wechat.processor.domain.repository.UserActionRepository;
 import im.cia.wechat.processor.service.XStreamTransformer;
 import im.cia.wechat.processor.service.bean.WeChatXmlMessage;
 
@@ -11,6 +14,9 @@ import im.cia.wechat.processor.service.bean.WeChatXmlMessage;
 public class WeChatMessageHandler implements MessageHandler {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(WeChatMessageHandler.class);
+	
+	@Autowired
+	private UserActionRepository userActionRepository;
 
 	@Override
 	public String handler(String messageBody) {
@@ -80,7 +86,13 @@ public class WeChatMessageHandler implements MessageHandler {
 		String replayMessage = "";
 		// 关注
 		if ("subscribe".equals(event)) {
-
+			
+			UserAction userAction = new UserAction();
+			userAction.setAppId(toUserName);
+			userAction.setOpenId(fromUserName);
+			userAction.setMsgType(msgType);
+			UserAction userActionFromDb = userActionRepository.save(userAction);
+			LOGGER.debug(userActionFromDb.getId());
 		}
 
 		// 取消关注
