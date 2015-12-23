@@ -24,7 +24,7 @@ public class UserWeChat {
 	@Id
 	@GeneratedValue(generator = "uuid")
 	@GenericGenerator(name = "uuid", strategy = "org.hibernate.id.UUIDGenerator")
-	@Column(name = "id", length = 32)
+	@Column(name = "id")
 	public String getId() {
 		return id;
 	}
