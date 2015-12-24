@@ -16,8 +16,6 @@ import javax.net.ssl.X509TrustManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.fasterxml.jackson.databind.util.JSONPObject;
-
 import im.cia.wechat.token.domain.model.WeChatAccessToken;
 import im.cia.wechat.token.domain.repository.WeChatAccessTokenRepository;
 
@@ -97,7 +95,7 @@ public class TokenService {
 		      inputStream.close();
 		      inputStream = null;
 		      httpUrlConn.disconnect();
-		      
+		      	
 		      
 //		      System.out.println(buffer.toString());
 		      
